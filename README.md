@@ -14,6 +14,6 @@ Este repositorio fue creado con el propósito de almacenar y gestionar las disti
 - Archivo de la conjetura de Collatz
 
 A continuación, el logo de la Universidad:
-![Logo UADER](https://tecnologica.uader.edu.ar/themes/fcyt/logo.png)
+![Logo UADER](https://estudiantesfcyt.com.ar/wp-content/uploads/2021/11/U-QueEstudiar-300.png)
 
 Para más información sobre la sintaxis Markdown, consultar la [Guía oficial de Markdown](https://www.markdownguide.org/).
