@@ -22,22 +22,33 @@ def factorial(num):
 
 #Cambios para rangos de factoriales
 
+
 if len(sys.argv) == 1:
-    entrada = input("Debe informar un número o rango (ej. 4-8): ")
+    entrada = input("Debe informar un número o rango (ej. 4-8, -10, 10-): ")
 else:
     entrada = sys.argv[1]
 
-# Verificamos si la entrada tiene un guion (es decir, si es un rango)
+
 if "-" in entrada:
     partes = entrada.split("-")
-    desde = int(partes[0])
-    hasta = int(partes[1])
     
-    # Calculamos el factorial para cada número en ese rango
+
+    if partes[0] == "":
+        desde = 1  
+    else:
+        desde = int(partes[0])  
+        
+
+    if partes[1] == "":
+        hasta = 60  
+    else:
+        hasta = int(partes[1]) 
+    
+  
     for i in range(desde, hasta + 1):
         print("Factorial", i, "! es", factorial(i))
 else:
-    # Si no tiene guion, es un número solo normal
+    
     num = int(entrada)
     print("Factorial", num, "! es", factorial(num))
 
