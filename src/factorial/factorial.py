@@ -20,12 +20,24 @@ def factorial(num):
             num -= 1
         return fact 
 
-# Verificamos si no se pasaron argumentos adicionales (solo está el nombre del archivo)
+#Cambios para rangos de factoriales
+
 if len(sys.argv) == 1:
-    entrada = input("Debe informar un número!: ")
+    entrada = input("Debe informar un número o rango (ej. 4-8): ")
 else:
     entrada = sys.argv[1]
 
-num = int(entrada)
-print("Factorial", num, "! es", factorial(num))
+# Verificamos si la entrada tiene un guion (es decir, si es un rango)
+if "-" in entrada:
+    partes = entrada.split("-")
+    desde = int(partes[0])
+    hasta = int(partes[1])
+    
+    # Calculamos el factorial para cada número en ese rango
+    for i in range(desde, hasta + 1):
+        print("Factorial", i, "! es", factorial(i))
+else:
+    # Si no tiene guion, es un número solo normal
+    num = int(entrada)
+    print("Factorial", num, "! es", factorial(num))
 
